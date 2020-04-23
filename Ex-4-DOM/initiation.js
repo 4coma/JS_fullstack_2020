@@ -22,7 +22,6 @@ ex2.addEventListener("blur",()=>{
 const ex3=document.getElementById('ex3');
 ex3.addEventListener("keydown",()=>{
 	ex3.size+=1;
-
 })
 /*--------------------*//*EX4*/
 
@@ -81,7 +80,7 @@ reset.addEventListener('click',()=>{
 	ex9.defaultValue="Texte initial";
 })
 /*--------------------*//*EX10*/
-
+const
 /*--------------------*//*EX11*/
 
 /*--------------------*//*EX12*/
