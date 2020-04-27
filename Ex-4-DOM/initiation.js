@@ -1,11 +1,3 @@
-
-document.forms[0].ch1.addEventListener('focus', () => {        
-    document.forms[0].ch1.value="";
-})
-
-document.forms[1].ch1.addEventListener('focus', () => {
-    document.forms[1].ch1.value="";
-})
 /*---------------------------------*/
 /*--------------------*//*EX1*/
 const ex1= document.getElementById("ex1");
@@ -15,6 +7,10 @@ ex1.addEventListener('focus',()=>{
 
 /*--------------------*//*EX2*/
 const ex2=document.getElementById("ex2");
+
+ex2.addEventListener('focus',()=>{
+	ex2.value="";
+});
 ex2.addEventListener("blur",()=>{
 	ex2.value=ex2.defaultValue;
 })
@@ -80,9 +76,28 @@ reset.addEventListener('click',()=>{
 	ex9.defaultValue="Texte initial";
 })
 /*--------------------*//*EX10*/
-const
+const val=document.forms[9].ch1;
+const tex=document.forms[9].ch2;
+const item=document.forms[9].s1;
+item.addEventListener('change', () => {
+	val.value = item.selectedOptions[0].value;
+	tex.value = item.selectedOptions[0].innerHTML;
+});
 /*--------------------*//*EX11*/
-
+const val2=document.forms[10].ch1;
+const tex2=document.forms[10].ch2;
+const item2=document.forms[10].s1;
+item2.addEventListener('click', () => {
+	const options=item2.selectedOptions;
+	let tabVal=[];
+	let tabtex=[];
+	for (const element of options) {
+		tabVal.push(element.value);
+		tabtex.push(element.innerHTML);
+	}
+	val2.value=tabVal.join(', ');
+	tex2.value=tabtex.join(', ');
+});
 /*--------------------*//*EX12*/
 
 /*--------------------*//*EX13*/
